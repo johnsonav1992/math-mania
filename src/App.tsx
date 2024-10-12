@@ -1,8 +1,9 @@
 import * as stylex from "@stylexjs/stylex";
 import { colors } from "./styles/theme.stylex";
+import { style } from "./styles/utils";
 
 const styles = stylex.create({
-  background: {
+  bg: {
     backgroundColor: colors.bgBlue,
     height: "100vh",
     width: "100vw",
@@ -10,10 +11,20 @@ const styles = stylex.create({
     justifyContent: "center",
     alignItems: "center",
   },
+  title: {
+    color: "white",
+    fontSize: "5rem",
+    fontWeight: "bold",
+    fontFamily: "Arial, sans-serif",
+  },
 });
 
 function App() {
-  return <div {...stylex.props(styles.background)}>hello</div>;
+  return (
+    <div {...style(styles.bg)}>
+      <h1 {...style(styles.title)}>Math Mania!</h1>
+    </div>
+  );
 }
 
 export default App;
