@@ -2,6 +2,16 @@ import * as stylex from "@stylexjs/stylex";
 import { colors } from "./styles/theme.stylex";
 import { style } from "./styles/utils";
 
+function App() {
+  return (
+    <div {...style(styles.bg)}>
+      <h1 {...style(styles.title)}>Math Mania!</h1>
+    </div>
+  );
+}
+
+export default App;
+
 const styles = stylex.create({
   bg: {
     backgroundColor: colors.bgBlue,
@@ -18,13 +28,3 @@ const styles = stylex.create({
     fontFamily: "Arial, sans-serif",
   },
 });
-
-function App() {
-  return (
-    <div {...style(styles.bg)}>
-      <h1 {...style(styles.title)}>Math Mania!</h1>
-    </div>
-  );
-}
-
-export default App;
