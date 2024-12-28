@@ -11,6 +11,8 @@ const Block = ({ color }: Props) => {
   return <div {...style(styles.numberBlock(color))}></div>;
 };
 
+export default Block;
+
 const styles = stylex.create({
   numberBlock: (color: BlockColors) => ({
     backgroundColor: blockColors[color],
@@ -22,5 +24,3 @@ const styles = stylex.create({
     boxShadow: "0 4px 8px rgba(0, 0, 0, 0.2), 0 6px 20px rgba(0, 0, 0, 0.2)",
   }),
 });
-
-export default Block;

@@ -4,7 +4,7 @@ export const commonColors = stylex.defineVars({
   bgBlue: "#49c7e7",
 });
 
-export const blockColors = stylex.defineVars({
+export const blockColorDefs = {
   red: "#e7161e",
   orange: "#fe9727",
   yellow: "#e1cb1f",
@@ -15,4 +15,6 @@ export const blockColors = stylex.defineVars({
   pink: "#e02897",
   gray: "#aba9aa",
   white: "#fff",
-});
+};
+
+export const blockColors = stylex.defineVars(blockColorDefs);

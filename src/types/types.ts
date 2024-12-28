@@ -1,3 +1,3 @@
-import { blockColors } from "../styles/theme.stylex";
+import { blockColorDefs } from "../styles/theme.stylex";
 
-export type BlockColors = keyof typeof blockColors;
+export type BlockColors = keyof typeof blockColorDefs;

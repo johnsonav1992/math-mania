@@ -15,7 +15,7 @@ const Gameboard = () => {
         </div>
       ) : (
         <>
-          <Block color="red" />
+          <Block color="blue" />
         </>
       )}
     </>
