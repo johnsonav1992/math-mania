@@ -9,7 +9,7 @@ const Gameboard = () => {
 
   return (
     <>
-      {hasNoOperands ? (
+      {!hasNoOperands ? (
         <div>
           <button {...style(styles.button)}>Start Game</button>
         </div>
