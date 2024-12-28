@@ -14,7 +14,9 @@ const Gameboard = () => {
           <button {...style(styles.button)}>Start Game</button>
         </div>
       ) : (
-        <Block color="red" />
+        <>
+          <Block color="red" />
+        </>
       )}
     </>
   );
