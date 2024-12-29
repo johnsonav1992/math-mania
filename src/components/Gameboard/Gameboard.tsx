@@ -22,7 +22,20 @@ const Gameboard = () => {
         </div>
       );
     case 'selection':
-      return <Block color='blue' />;
+      return (
+        <div>
+          <form>
+            <label htmlFor='operator'>Choose an operator:</label>
+            <select id='operator' onChange={() => []}>
+              <option value='plus'>Plus</option>
+              <option value='minus'>Minus</option>
+            </select>
+            <button {...style(styles.button)} onClick={() => setScreen('game')}>
+              Start Practice
+            </button>
+          </form>
+        </div>
+      );
     case 'game':
       return <Block color='blue' />;
   }
