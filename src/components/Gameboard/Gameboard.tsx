@@ -2,27 +2,30 @@ import * as stylex from '@stylexjs/stylex';
 import { style } from '../../styles/utils';
 import Block from '../Block/Block';
 import { useAtom } from 'jotai';
-import { operandsAtom } from '../../state/state';
+import { operandsAtom, screenAtom } from '../../state/state';
 
 const Gameboard = () => {
   const [operands, setOperands] = useAtom(operandsAtom);
+  const [screen, setScreen] = useAtom(screenAtom);
   const hasNoOperands = operands.every(op => !op);
 
-  return (
-    <>
-      {hasNoOperands ? (
+  switch (screen) {
+    case 'welcome':
+      return (
         <div>
-          <button {...style(styles.button)} onClick={() => setOperands([])}>
+          <button
+            {...style(styles.button)}
+            onClick={() => setScreen('selection')}
+          >
             Start Game
           </button>
         </div>
-      ) : (
-        <>
-          <Block color='blue' />
-        </>
-      )}
-    </>
-  );
+      );
+    case 'selection':
+      return <Block color='blue' />;
+    case 'game':
+      return <Block color='blue' />;
+  }
 };
 
 export default Gameboard;
