@@ -2,12 +2,10 @@ import * as stylex from '@stylexjs/stylex';
 import { style } from '../../styles/utils';
 import Block from '../Block/Block';
 import { useAtom } from 'jotai';
-import { operandsAtom, screenAtom } from '../../state/state';
+import { screenAtom } from '../../state/state';
 
 const Gameboard = () => {
-  const [operands, setOperands] = useAtom(operandsAtom);
   const [screen, setScreen] = useAtom(screenAtom);
-  const hasNoOperands = operands.every(op => !op);
 
   switch (screen) {
     case 'welcome':
@@ -26,7 +24,7 @@ const Gameboard = () => {
         <div>
           <form>
             <label htmlFor='operator'>Choose an operator:</label>
-            <select id='operator' onChange={() => []}>
+            <select onChange={() => []}>
               <option value='plus'>Plus</option>
               <option value='minus'>Minus</option>
             </select>
