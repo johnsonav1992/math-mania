@@ -10,15 +10,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "@stylexjs/stylex": "^0.9.3",
     "jotai": "^2.11.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
-    "@stylexjs/babel-plugin": "^0.9.3",
-    "@stylexjs/dev-runtime": "^0.9.3",
     "@types/react": "^19.0.2",
     "@types/react-dom": "^19.0.2",
     "@vitejs/plugin-react": "^4.3.4",
