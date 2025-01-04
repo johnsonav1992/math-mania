@@ -1,5 +1,3 @@
-import * as stylex from '@stylexjs/stylex';
-import { style } from '../../styles/utils';
 import Block from '../Block/Block';
 import { useAtom } from 'jotai';
 import { screenAtom } from '../../state/state';
@@ -11,12 +9,7 @@ const Gameboard = () => {
     case 'welcome':
       return (
         <div>
-          <button
-            {...style(styles.button)}
-            onClick={() => setScreen('selection')}
-          >
-            Start Game
-          </button>
+          <button onClick={() => setScreen('selection')}>Start Game</button>
         </div>
       );
     case 'selection':
@@ -28,9 +21,7 @@ const Gameboard = () => {
               <option value='plus'>Plus</option>
               <option value='minus'>Minus</option>
             </select>
-            <button {...style(styles.button)} onClick={() => setScreen('game')}>
-              Start Practice
-            </button>
+            <button onClick={() => setScreen('game')}>Start Practice</button>
           </form>
         </div>
       );
@@ -41,17 +32,17 @@ const Gameboard = () => {
 
 export default Gameboard;
 
-const styles = stylex.create({
-  button: {
-    backgroundColor: {
-      default: 'blue',
-      ':hover': 'green'
-    },
-    color: 'white',
-    padding: '1rem',
-    borderRadius: '0.5rem',
-    border: 'none',
-    fontSize: '1.5rem',
-    cursor: 'pointer'
-  }
-});
+// const styles = stylex.create({
+//   button: {
+//     backgroundColor: {
+//       default: 'blue',
+//       ':hover': 'green'
+//     },
+//     color: 'white',
+//     padding: '1rem',
+//     borderRadius: '0.5rem',
+//     border: 'none',
+//     fontSize: '1.5rem',
+//     cursor: 'pointer'
+//   }
+// });
