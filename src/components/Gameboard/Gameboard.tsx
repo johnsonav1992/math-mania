@@ -1,6 +1,7 @@
 import Block from '../Block/Block';
 import { useAtom } from 'jotai';
 import { screenAtom } from '../../state/state';
+import { Button } from '@mui/joy';
 
 const Gameboard = () => {
   const [screen, setScreen] = useAtom(screenAtom);
@@ -9,7 +10,9 @@ const Gameboard = () => {
     case 'welcome':
       return (
         <div>
-          <button onClick={() => setScreen('selection')}>Start Game</button>
+          <Button onClick={() => setScreen('selection')} color='warning'>
+            Start Game
+          </Button>
         </div>
       );
     case 'selection':
